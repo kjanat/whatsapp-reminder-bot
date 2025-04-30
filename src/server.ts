@@ -2,10 +2,14 @@ import express, { Request, Response } from 'express';
 import bodyParser from 'body-parser';
 import WhatsAppBot from './bot';
 import { scheduleReminders } from './scheduler';
+import { PHONE_NUMBER } from './config';
 
 const app = express();
 const port = process.env.PORT || 3000;
 const bot = new WhatsAppBot('Time to take your insulin!', 'Don’t forget to take your insulin!');
+
+// bot.sendReminder(PHONE_NUMBER);
+// bot.sendFollowUpReminder(PHONE_NUMBER);
 
 app.use(bodyParser.json());
 

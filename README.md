@@ -10,16 +10,18 @@ This project is a simple WhatsApp bot that sends daily reminders for insulin int
 
 ## Project Structure
 
+<!-- cd ../ && tree whatsapp-reminder-bot --dirsfirst -I node_modules -I package-lock.json && cd whatsapp-reminder-bot -->
 ```sh
 whatsapp-reminder-bot
 ├── src
 │   ├── bot.ts          # Contains the main logic for the WhatsApp bot
-│   ├── server.ts       # Sets up the server to listen for incoming messages
+│   ├── config.ts       # Contains configuration settings for the bot
 │   ├── scheduler.ts    # Manages the scheduling of reminders
-│   └── config.ts       # Contains configuration settings for the bot
+│   └── server.ts       # Sets up the server to listen for incoming messages
+├── LICENSE             # License file for the project
+├── README.md           # Documentation for the project
 ├── package.json        # Lists dependencies and scripts for the project
-├── tsconfig.json       # TypeScript configuration file
-└── README.md           # Documentation for the project
+└── tsconfig.json       # TypeScript configuration file
 ```
 
 ## Setup Instructions
